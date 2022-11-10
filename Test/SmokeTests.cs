@@ -42,7 +42,6 @@ namespace Test
             Assert.That(elapsedMilliseconds, Is.LessThan(750), "Should take less than 750ms");
         }
 
-
         [Test]
         public async Task PostNewComment_CheckStatusCode_ShouldEqualHttpCreated()
         {
@@ -63,7 +62,7 @@ namespace Test
             int elapsedMilliseconds = timer.Elapsed.Milliseconds;
 
             Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Created), "Should return 401 - Created");
-            Assert.That(elapsedMilliseconds, Is.LessThan(750), "Should take less than 750ms");
+            Assert.That(elapsedMilliseconds, Is.LessThan(1000), "Should take less than 1000ms");
         }
     }
 }
