@@ -61,7 +61,7 @@ namespace Test
             timer.Stop();
             int elapsedMilliseconds = timer.Elapsed.Milliseconds;
 
-            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Created), "Should return 401 - Created");
+            Assert.That(response.StatusCode, Is.EqualTo(HttpStatusCode.Created), "Should return 201 - Created");
             Assert.That(elapsedMilliseconds, Is.LessThan(1000), "Should take less than 1000ms");
         }
     }
